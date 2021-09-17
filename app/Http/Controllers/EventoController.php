@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Evento;
-use App\Models\EventoUser;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
@@ -111,16 +110,6 @@ class EventoController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function createUser()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -143,48 +132,6 @@ class EventoController extends Controller
     {
         //
         $evento = Evento::all();
-        return response()->json($evento);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Evento  $evento
-     * @return \Illuminate\Http\Response
-     */
-    public function editUser($id)
-    {
-        //
-        $evento = Evento::find($id);
-
-        return response()->json($evento);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Evento  $evento
-     * @return \Illuminate\Http\Response
-     */
-    public function updateUser(Request $request, Evento $evento)
-    {
-        //
-        request()->validate(Evento::$rules);
-        $evento->update($request->all());
-        return response()->json($evento);
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Evento  $evento
-     * @return \Illuminate\Http\Response
-     */
-    public function destroyUser($id)
-    {
-        //
-        $evento = Evento::find($id)->delete();
         return response()->json($evento);
     }
 }

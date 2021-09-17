@@ -10,7 +10,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Generar agenda</h5>
+                <h5 class="modal-title">Generar Cita</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -27,19 +27,31 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="title">Título</label>
-                      <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId" placeholder="">
-                      <small id="helpId" class="form-text text-muted">Aquí se describe el título del evento</small>
+                      <label for="documento">Número de Documento de Identidad</label>
+                      <input type="number" class="form-control" name="documento" id="documento" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Diligenciar el número de documento de identidad</small>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="nombres">Nombres</label>
+                      <input type="text" class="form-control" name="nombres" id="nombres" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Diligenciar los nombres</small>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="apellidos">Apellidos</label>
+                      <input type="text" class="form-control" name="apellidos" id="apellidos" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Diligenciar los apellidos</small>
                     </div>
 
                     <div class="form-group">
                       <label for="descripcion">Descripción</label>
                       <textarea class="form-control" name="descripcion" id="descripcion" rows="3" placeholder=""></textarea>
-                      <small id="helpId" class="form-text text-muted">Agrega una descripción</small>
+                      <small id="helpId" class="form-text text-muted">Agrega una descripción de la cita</small>
                     </div>
 
                     <div class="form-group">
-                      <label for="Horario">Elegir la hora de la cita</label>
+                      <label for="horario">Elegir la hora de la cita</label>
                       <select name="horario">
                         <option></option>
                         <option>7:00 AM - 7:30 AM</option>

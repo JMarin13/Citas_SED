@@ -22,25 +22,25 @@ document.addEventListener('DOMContentLoaded', function() {
             url: baseURL+"/evento/mostrar",
             method:"POST",
             extraParams: {
-                _token: formulario._token.value
+                _token: formulario._token.value,
             }
         },
 
         /* Función que me muestra los datos de la cita cuando se le da click al evento */
-        dateClick:function(info){
+        dateClick:function(){
             formulario.reset();
             $("#evento").modal("show");
         },
 
-        eventClick:function (info) {
-            var evento = info.event;
-            console.log(evento);
+        eventClick:function () {
 
             axios.post(baseURL+"/evento/editar/"+info.event.id).
             then(
                 (respuesta) => {
                     formulario.id.value = respuesta.data.id;
-                    formulario.title.value = respuesta.data.title;
+                    formulario.documento.value = respuesta.data.documento;
+                    formulario.nombres.value = respuesta.data.nombres;
+                    formulario.apellidos.value = respuesta.data.apellidos;
                     formulario.descripcion.value = respuesta.data.descripcion;
                     $("#evento").modal("show");
                 }
