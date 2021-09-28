@@ -25,8 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
 
-        dateClick:function(){
+        // Abre el formulario para crear la cita, cuando se le da clic a una fecha
+        dateClick:function(info){
             formulario.reset();
+
+            formulario.title.value = "Prestación Social";
+            formulario.start.value = info.dateStr;
+            formulario.end.value = info.dateStr;
 
             $("#eventoUser").modal("show");
         },
@@ -58,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     calendar.render();
 
+    // 
     document.getElementById("btnGuardar").addEventListener("click", function() {
 
         enviarDatos("/eventoUser/agregar");

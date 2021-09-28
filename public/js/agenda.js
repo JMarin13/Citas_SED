@@ -27,8 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         /* Función que me muestra los datos de la cita cuando se le da click al evento */
-        dateClick:function(){
+        dateClick:function(info){
             formulario.reset();
+
+            formulario.title.value = "Prestación Social";
+            formulario.start.value = info.dateStr;
+            formulario.end.value = info.dateStr;
+
             $("#evento").modal("show");
         },
 

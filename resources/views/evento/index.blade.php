@@ -27,6 +27,12 @@
                     </div>
 
                     <div class="form-group">
+                      <label for="title">Título de la cita</label>
+                      <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Título de la cita</small>
+                    </div>
+
+                    <div class="form-group">
                       <label for="documento">Número de Documento de Identidad</label>
                       <input type="number" class="form-control" name="documento" id="documento" aria-describedby="helpId" placeholder="">
                       <small id="helpId" class="form-text text-muted">Diligenciar el número de documento de identidad</small>
@@ -65,6 +71,17 @@
                         <option>11:00 AM - 11:30 AM</option>
                         <option>11:30 AM - 12:00 M</option>
                         </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="start">start</label>
+                      <input type="text" class="form-control" name="start" id="start" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Inicio de la cita</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="end">end</label>
+                      <input type="text" class="form-control" name="end" id="end" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Fin de la cita</small>
                     </div>
                 </form>
             </div>

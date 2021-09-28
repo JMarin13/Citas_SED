@@ -119,7 +119,7 @@ class EventoController extends Controller
     {
         //
         request()->validate(Evento::$rules);
-        $evento=Evento::create($request->all());
+        $evento = Evento::create($request->all());
     }
 
     /**
